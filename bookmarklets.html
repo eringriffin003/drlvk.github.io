@@ -41,7 +41,7 @@
 <table>
 <tr id="webwork-email">
   <td class="name"> Open the page with WebWork problem about which you got an email.</td>
-  <td> <strong><a href="javascript:(function()%7Bw%3Ddocument.querySelector('a%5Bhref*%3D%22webwork.syr.edu%22%5D').href.split(%22%3F%22)%5B0%5D%3Bu%3Ddocument.querySelector('a%5Bhref*%3D%22%40syr.edu%22%5D')%3Bif%20(u)%20%7Bu%3Du.href.split(%22%40%22)%5B0%5D.split(%22%3A%22)%5B1%5D%3B%7Delse%20%7Bu%3Ddocument.querySelector('img%5Bsrc*%3D%22service.svc%22%5D')%3Bu%3Du.src.split(%22%25%22)%5B0%5D.split(%22email%3D%22)%5B1%5D%3B%7Dwindow.open(w%2B%22%3FshowCorrectAnswers%3D1%26effectiveUser%3D%22%2Bu)%7D)()">WebWork email</a></strong>: 
+  <td> <strong><a href="javascript:(function()%7Bw%20%3D%20document.querySelector('a%5Bhref*%3D%22webwork.syr.edu%22%5D').href.split(%22%3F%22)%5B0%5D%3Bu%20%3D%20document.querySelector('a%5Bhref*%3D%22mailto%3A%22%5D')%3Bif%20(u)%20%7Bu%20%3D%20u.href.split(%22%40%22)%5B0%5D.split(%22%3A%22)%5B1%5D%3B%7Delse%20%7Bu%20%3D%20document.querySelector('img%5Bsrc*%3D%22service.svc%22%5D')%3Bu%20%3D%20u.src.split(%22%25%22)%5B0%5D.split(%22email%3D%22)%5B1%5D%3B%7Dwindow.open(w%20%2B%20%22%3FshowCorrectAnswers%3D1%26effectiveUser%3D%22%20%2B%20u)%7D)()">WebWork email</a></strong>: 
   When executed on a Gmail page or Outlook Web Access page with a student's email that contains a link to a WeBWork problem, it opens WebWork page with student's work. 
   It is assumed that the student emails from their syr.edu account. The script locates the link to WebWork problem and the student's email address,
   and creates a URL of the form "...course/set/problem/?showCorrectAnswers=1&amp;effectiveUser=username", which it then opens in a new tab.</td>
