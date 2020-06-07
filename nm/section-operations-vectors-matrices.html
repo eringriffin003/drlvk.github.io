@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-06-06T20:29:58-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Operations on vectors and matrices</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="numerical-methods.html"><span class="title">Numerical Methods with Programming:</span> <span class="subtitle">Lecture notes</span></a></h1>
+<p class="byline">Leonid Kovalev</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-vectors-matrices.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="scalars-vectors-matrices.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-indexing-vectors-matrices.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-vectors-matrices.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="scalars-vectors-matrices.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-indexing-vectors-matrices.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="acknowledgement.html" data-scroll="acknowledgement">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="preface">Preface</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-matlab.html" data-scroll="part-matlab"><span class="codenumber">I</span> <span class="title">Using Matlab</span></a></li>
+<li class="link">
+<a href="scalars-vectors-matrices.html" data-scroll="scalars-vectors-matrices"><span class="codenumber">1</span> <span class="title">Scalars, vectors and matrices</span></a><ul>
+<li><a href="section-matlab-interface.html" data-scroll="section-matlab-interface">Matlab interface</a></li>
+<li><a href="section-scalars.html" data-scroll="section-scalars">Assigning scalar values</a></li>
+<li><a href="section-vectors-matrices.html" data-scroll="section-vectors-matrices">Creating vectors and matrices</a></li>
+<li><a href="section-operations-vectors-matrices.html" data-scroll="section-operations-vectors-matrices" class="active">Operations on vectors and matrices</a></li>
+<li><a href="section-indexing-vectors-matrices.html" data-scroll="section-indexing-vectors-matrices">Accessing the entries of vectors and matrices</a></li>
+<li><a href="section-examples.html" data-scroll="section-examples">Examples</a></li>
+<li><a href="exercises-matrices-vectors.html" data-scroll="exercises-matrices-vectors">Homework</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-equations.html" data-scroll="part-equations"><span class="codenumber">II</span> <span class="title">Solving Equations</span></a></li>
+<li class="link part"><a href="part-calculus.html" data-scroll="part-calculus"><span class="codenumber">III</span> <span class="title">Numerical Calculus</span></a></li>
+<li class="link part"><a href="part-data.html" data-scroll="part-data"><span class="codenumber">IV</span> <span class="title">Modeling Data</span></a></li>
+<li class="link part"><a href="part-optimization.html" data-scroll="part-optimization"><span class="codenumber">V</span> <span class="title">Optimization</span></a></li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="appendix-1"><span class="codenumber">A</span> <span class="title">Notation</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Hints and Solutions to Selected Exercises</span></a></li>
+<li class="link">
+<a href="appendix-2.html" data-scroll="appendix-2"><span class="codenumber">C</span> <span class="title">A Structured Appendix</span></a><ul>
+<li><a href="section-7.html" data-scroll="section-7">A Section in an Appendix</a></li>
+<li><a href="section-8.html" data-scroll="section-8">Numbering in the Back Matter</a></li>
+</ul>
+</li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl"><span class="codenumber">D</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="back-colophon.html" data-scroll="back-colophon"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-operations-vectors-matrices"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.4</span> <span class="title">Operations on vectors and matrices</span>
+</h2>
+<p id="p-23"><em class="emphasis">Addition</em> and <em class="emphasis">subtraction</em> works the same way as it does in Linear Algebra. If two vectors, or two matrices, have the same size, they can be added or subtracted. For example:</p>
+<pre class="code-block tex2jax_ignore">
+    x = [3 7 2];
+    y = [8 -2 0];
+    z = x + y;
+</pre>
+<p data-braille="continuation">results in <code class="code-inline tex2jax_ignore">z</code> being <code class="code-inline tex2jax_ignore">[11 5 2]</code>. But we cannot add <code class="code-inline tex2jax_ignore">[8 -2]</code> and <code class="code-inline tex2jax_ignore">[2 5 8]</code> because these vectors have different sizes.</p>
+<p id="p-24"><em class="emphasis">Scalar multiplication</em> also works as expected: with <code class="code-inline tex2jax_ignore">x</code> as above, <code class="code-inline tex2jax_ignore">3*x</code> is the vector <code class="code-inline tex2jax_ignore">[9 21 6]</code>.</p>
+<p id="p-25">One can also multiply two vectors, or two matrices, or a vector and a matrix. To understand how this works in Matlab, keep in mind that a vector is treated as a matrix with one row (or one column). Two matrices can be multiplied only when the inner dimensions agree: that is, two matrices of sizes \(m\times n\) and \(p\times q\) can be multiplied when \(n = p\text{.}\) The product has size \(m\times q\text{.}\) Some examples:</p>
+<ul class="disc">
+<li id="li-9">
+<code class="code-inline tex2jax_ignore">[3 7] * [4 2]</code> is <em class="alert">an error</em>: the first argument has size \(1\times 2\text{,}\) the second also has size \(1\times 2\text{,}\) and the inner dimensions do not agree: \(2\ne 1\text{.}\)</li>
+<li id="li-10">
+<code class="code-inline tex2jax_ignore">[3 7] * [4; 2]</code> is <code class="code-inline tex2jax_ignore">26</code>. the first argument has size \(1\times 2\text{,}\) the second has size \(2\times 1\text{,}\) so the product is defined and has size \(1\times 1\) which makes it a scalar. This is how one computes the <dfn class="terminology">scalar product</dfn> of two vectors: it comes from multiplying a row vector by a column vector.</li>
+<li id="li-11">
+<code class="code-inline tex2jax_ignore">[1 2 3; 4 5 6] * [-4; 0; 3]</code> is <code class="code-inline tex2jax_ignore">[5; 2]</code>. The sizes \(2\times 3\) and \(3\times 1\) are compatible and the product has size \(2\times 1\text{.}\) This is how <dfn class="terminology">matrix-vector</dfn> products work in linear algebra too: the vector, placed to the right of a matrix, must be written as a column.</li>
+<li id="li-12">
+<code class="code-inline tex2jax_ignore">[5 -2] * [1 2 3; 4 5 6]</code> is <code class="code-inline tex2jax_ignore">[-3 0 3]</code>. The sizes \(1\times 2\) and \(2\times 3\) are compatible and the product has size \(1\times 3\text{.}\) So, we can have a vector to the left of a matrix when it is a row vector.</li>
+<li id="li-13">
+<code class="code-inline tex2jax_ignore">[0 1; -1 0] * [1 2 3; 4 5 6]</code> is <code class="code-inline tex2jax_ignore">[4   5   6; -1  -2  -3]</code>. This is a <dfn class="terminology">matrix product</dfn>. Two matrices have compatible sizes \(2\times 2\) and \(2\times 3\text{,}\) and the product is of size \(2\times 3\text{.}\)</li>
+</ul></section></div></main>
+</div>
+</body>
+</html>
