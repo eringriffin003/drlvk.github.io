@@ -11,10 +11,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body>
-<article class="li"><h6 class="heading">
-<span class="type">Item</span><span class="space"> </span><span class="codenumber">1.7.1.e</span><span class="period">.</span>
-</h6>
-<code class="code-inline tex2jax_ignore">A(:, end:-1:1)</code></article><span class="incontext"><a href="exercises-matrices-vectors.html#li-18">in-context</a></span>
-</body>
+<body><div class="answer solution-like">
+<pre class="code-block tex2jax_ignore">2*diag(ones(1, n)) - diag(ones(1, n-1), 1) - diag(ones(1, n-1), -1)
+</pre>
+<p>Note why <code class="code-inline tex2jax_ignore">n-1</code> appears above: the main diagonal has length <code class="code-inline tex2jax_ignore">n</code> but the diagonals next to it have length <code class="code-inline tex2jax_ignore">n-1</code>.</p>
+</div></body>
 </html>

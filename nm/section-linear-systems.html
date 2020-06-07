@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-06T20:29:58-04:00    *-->
+<!--*    on 2020-06-07T19:47:30-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -9,7 +9,7 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>A Structured Appendix</title>
+<title>Systems of linear equations</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/x-mathjax-config">
@@ -67,12 +67,10 @@ MathJax.Hub.Config({
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="solutions-1.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="backmatter.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-7.html" title="Next">Next</a></span>
-</div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="scalars-vectors-matrices.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="scalars-vectors-matrices.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-large-matrices.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="solutions-1.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="backmatter.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-7.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="scalars-vectors-matrices.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="scalars-vectors-matrices.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-large-matrices.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -95,31 +93,44 @@ MathJax.Hub.Config({
 <li><a href="exercises-matrices-vectors.html" data-scroll="exercises-matrices-vectors">Homework</a></li>
 </ul>
 </li>
+<li class="link">
+<a href="scalars-vectors-matrices.html" data-scroll="scalars-vectors-matrices"><span class="codenumber">2</span> <span class="title">Linear systems, vectorization, plots</span></a><ul>
+<li><a href="section-linear-systems.html" data-scroll="section-linear-systems" class="active">Systems of linear equations</a></li>
+<li><a href="section-large-matrices.html" data-scroll="section-large-matrices">More tools for constructing matrices</a></li>
+</ul>
+</li>
 <li class="link part"><a href="part-equations.html" data-scroll="part-equations"><span class="codenumber">II</span> <span class="title">Solving Equations</span></a></li>
 <li class="link part"><a href="part-calculus.html" data-scroll="part-calculus"><span class="codenumber">III</span> <span class="title">Numerical Calculus</span></a></li>
 <li class="link part"><a href="part-data.html" data-scroll="part-data"><span class="codenumber">IV</span> <span class="title">Modeling Data</span></a></li>
 <li class="link part"><a href="part-optimization.html" data-scroll="part-optimization"><span class="codenumber">V</span> <span class="title">Optimization</span></a></li>
-<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="appendix-1.html" data-scroll="appendix-1"><span class="codenumber">A</span> <span class="title">Notation</span></a></li>
-<li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Hints and Solutions to Selected Exercises</span></a></li>
-<li class="link active">
-<a href="appendix-2.html" data-scroll="appendix-2"><span class="codenumber">C</span> <span class="title">A Structured Appendix</span></a><ul>
-<li><a href="section-7.html" data-scroll="section-7">A Section in an Appendix</a></li>
-<li><a href="section-8.html" data-scroll="section-8">Numbering in the Back Matter</a></li>
-</ul>
-</li>
-<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl"><span class="codenumber">D</span> <span class="title">GNU Free Documentation License</span></a></li>
-<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
-<li class="link"><a href="back-colophon.html" data-scroll="back-colophon"><span class="title">Colophon</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"><section class="appendix" id="appendix-2"><h2 class="heading hide-type">
-<span class="type">Appendix</span> <span class="codenumber">C</span> <span class="title">A Structured Appendix</span>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-linear-systems"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.1</span> <span class="title">Systems of linear equations</span>
 </h2>
-<section class="introduction" id="introduction-2"><p id="p-42">A deeply-structured appendix for testing purposes.</p></section><nav class="summary-links"><ul>
-<li><a href="section-7.html"><span class="codenumber">C.1</span> <span class="title">A Section in an Appendix</span></a></li>
-<li><a href="section-8.html"><span class="codenumber">C.2</span> <span class="title">Numbering in the Back Matter</span></a></li>
-</ul></nav></section></div></main>
+<p id="p-42">A system of linear equations, such as</p>
+<div class="displaymath">
+\begin{align*}
+3x_1 - 2x_2 \amp = 6 \\
+2x_1 + 5x_2 \amp = -3 
+\end{align*}
+</div>
+<p data-braille="continuation">can be written in matrix form as \(Ax=b\) where \(A\) is the matrix of coefficients,</p>
+<div class="displaymath">
+\begin{equation*}
+A = \begin{pmatrix} 3 \amp -2 \\ 2 \amp 5 \end{pmatrix}
+\end{equation*}
+</div>
+<p data-braille="continuation">and \(b\) is the <em class="emphasis">column</em> vector on the right-hand side:</p>
+<div class="displaymath">
+\begin{equation*}
+b = \begin{pmatrix} 6  \\ -3 \end{pmatrix}
+\end{equation*}
+</div>
+<p data-braille="continuation">The Matlab command for solving \(Ax=b\) is very short:</p>
+<pre class="code-block tex2jax_ignore">x = A\b</pre>
+<p data-braille="continuation">The result is the column vector <code class="code-inline tex2jax_ignore">[1.2632; -1.1053]</code>, meaning that \(x_1\approx 1.2632\) and \(x_2 \approx -1.1053\text{.}\)</p>
+<p id="p-43">Mathematically, \(x\) could be found as \(x = A^{-1}b\) where \(A^{-1}\) is the inverse matrix. However, this is not a computationally efficient way to solve a linear system. Matlab does not actually compute the inverse matrix when solving a linear system. It chooses one of several algorithms based on the nature of the matrix; usually it is a form of “LU factorization” which is discussed in MAT 532. But even though the formula \(x = A^{-1}b\) is not actually used, it suggests the notation used by Matlab. For two numbers \(a, b\) we can write \(ba^{-1}\) as <code class="code-inline tex2jax_ignore">b/a</code>, meaning \(b\) divided by \(a\text{.}\) If the order of multiplication was important (as it is for matrices), then perhaps \(a^{-1}b\) could be written as <code class="code-inline tex2jax_ignore">a\b</code>, meaning \(b\) divided by \(a\) <em class="emphasis">from the left</em>. We do not actually “divide a vector by a matrix” but the notation <code class="code-inline tex2jax_ignore">A\b</code> can remind us of \(A^{-1}b\text{.}\)</p></section></div></main>
 </div>
 </body>
 </html>
