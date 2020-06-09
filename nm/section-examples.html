@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-07T23:43:34-04:00    *-->
+<!--*    on 2020-06-08T20:49:39-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -67,10 +67,10 @@ MathJax.Hub.Config({
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-indexing-vectors-matrices.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="scalars-vectors-matrices.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="exercises-matrices-vectors.html" title="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-plotting.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="systems-vectorization-plots.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="exercises-systems-vectorization-plots.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-indexing-vectors-matrices.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="scalars-vectors-matrices.html" title="Up">Up</a><a class="next-button button toolbar-item" href="exercises-matrices-vectors.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-plotting.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="systems-vectorization-plots.html" title="Up">Up</a><a class="next-button button toolbar-item" href="exercises-systems-vectorization-plots.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -89,14 +89,18 @@ MathJax.Hub.Config({
 <li><a href="section-vectors-matrices.html" data-scroll="section-vectors-matrices">Creating vectors and matrices</a></li>
 <li><a href="section-operations-vectors-matrices.html" data-scroll="section-operations-vectors-matrices">Operations on vectors and matrices</a></li>
 <li><a href="section-indexing-vectors-matrices.html" data-scroll="section-indexing-vectors-matrices">Accessing the entries of vectors and matrices</a></li>
-<li><a href="section-examples.html" data-scroll="section-examples" class="active">Examples</a></li>
+<li><a href="section-examples.html" data-scroll="section-examples">Examples</a></li>
 <li><a href="exercises-matrices-vectors.html" data-scroll="exercises-matrices-vectors">Homework</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="systems-vectorization-plots.html" data-scroll="systems-vectorization-plots"><span class="codenumber">2</span> <span class="title">Linear systems, vectorized computations, plots</span></a><ul>
+<a href="systems-vectorization-plots.html" data-scroll="systems-vectorization-plots"><span class="codenumber">2</span> <span class="title">Linear systems, array operations, plots</span></a><ul>
 <li><a href="section-linear-systems.html" data-scroll="section-linear-systems">Systems of linear equations</a></li>
 <li><a href="section-large-matrices.html" data-scroll="section-large-matrices">More tools for constructing matrices</a></li>
+<li><a href="section-vectorization.html" data-scroll="section-vectorization">Array operations</a></li>
+<li><a href="section-plotting.html" data-scroll="section-plotting">Plotting</a></li>
+<li><a href="section-examples.html" data-scroll="section-examples" class="active">Examples</a></li>
+<li><a href="exercises-systems-vectorization-plots.html" data-scroll="exercises-systems-vectorization-plots">Homework</a></li>
 </ul>
 </li>
 <li class="link part"><a href="part-equations.html" data-scroll="part-equations"><span class="codenumber">II</span> <span class="title">Solving Equations</span></a></li>
@@ -106,52 +110,57 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="section-examples"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">1.6</span> <span class="title">Examples</span>
+<span class="type">Section</span> <span class="codenumber">2.5</span> <span class="title">Examples</span>
 </h2>
-<p id="p-30">When reading each example, try to find your own solution before clicking the “Answer” link.</p>
-<article class="example example-like" id="example-1"><a data-knowl="" class="id-ref original" data-refid="hk-example-1"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.6.1</span><span class="period">.</span><span class="space"> </span><span class="title">Scalar product of two vectors.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-1"><article class="example example-like"><p id="p-31">Write a script that calculates and displays the scalar product of two vectors: [1 2 ... n] and [n n-1 ... 1]. Use the first two digits of SUID as your value of n.</p>
-<div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-1" id="answer-1"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like">
+<article class="example example-like" id="example-4"><a data-knowl="" class="id-ref original" data-refid="hk-example-4"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.1</span><span class="period">.</span><span class="space"> </span><span class="title">Tridiagonal matrix of arbitrary size.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-4"><article class="example example-like">Given a positive integer \(n\text{,}\) construct a tridiagonal matrix of the above form with size \(n\times n\text{.}\)<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-4" id="answer-4"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like">
+<pre class="code-block tex2jax_ignore">diag(2*ones(1, n)) - diag(ones(1, n-1), 1) - diag(ones(1, n-1), -1)
+</pre>
+<p id="p-56">or</p>
+<pre class="code-block tex2jax_ignore">2*diag(ones(1, n)) - diag(ones(1, n-1), 1) - diag(ones(1, n-1), -1)
+</pre>
+<p id="p-57">or</p>
+<pre class="code-block tex2jax_ignore">2*eye(n) - diag(ones(1, n-1), 1) - diag(ones(1, n-1), -1)
+</pre>
+<p id="p-58">It is important to recognize why <code class="code-inline tex2jax_ignore">n-1</code> appears above. The main diagonal has length <code class="code-inline tex2jax_ignore">n</code> but the diagonals next to it are shorter by 1 element, so their length is <code class="code-inline tex2jax_ignore">n-1</code>.</p>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="example-5"><a data-knowl="" class="id-ref original" data-refid="hk-example-5"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.2</span><span class="period">.</span><span class="space"> </span><span class="title">Solving a tridiagonal system.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-5"><article class="example example-like">Solve the system of linear equations<div class="displaymath">
+\begin{align*}
+3x_1 - x_2 \amp = 1 \\
+- x_1 + 3x_2 - x_3 \amp = 0 \\
+- x_2 + 3x_3 - x_4 \amp = 0 \\
+\cdots \\
+- x_{n-2} + 3x_{n-1} - x_{n} \amp = 0 \\
+- x_{n-1} + 3x_{n} \amp = 2 
+\end{align*}
+</div>Use the first two digits of your SUID as the value of \(n\text{.}\)<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-5" id="answer-5"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like">
 <pre class="code-block tex2jax_ignore">n = 28;
-u = 1:n;
-v = n:-1:1;
-disp(u*v')
+A = 3*eye(n) - diag(ones(1, n-1), 1) - diag(ones(1, n-1), -1);
+b = zeros(n, 1);
+b(1) = 1;
+b(end) = 2;
+x = A\b;
+disp(x)
 </pre>
-<p id="p-32"><em class="emphasis">Explanation</em>. Recall from <a href="section-vectors-matrices.html" class="internal" title="Section 1.3: Creating vectors and matrices">Section 1.3</a> that <code class="code-inline tex2jax_ignore">a:h:b</code> means a regularly spaced vector whose entries start with <code class="code-inline tex2jax_ignore">a</code>, and then change by amount <code class="code-inline tex2jax_ignore">h</code> until reaching <code class="code-inline tex2jax_ignore">b</code>. When <code class="code-inline tex2jax_ignore">h</code> is omitted, it is understood to be 1. So, this code makes <code class="code-inline tex2jax_ignore">u</code> equal to [1 2 ... 28] and <code class="code-inline tex2jax_ignore">v</code> equal to [28 27 ... 1]. Both are row vectors. Transposing the second vector into a column is necessary for their product to make sense, as noted in <a href="section-operations-vectors-matrices.html" class="internal" title="Section 1.4: Operations on vectors and matrices">Section 1.4</a>. Note that each of these lines ends with a semicolon, which prevents the intermediate results from being displayed on screen. Then <code class="code-inline tex2jax_ignore">disp</code> displays the final result.</p>
+<p id="p-59"><em class="emphasis">Explanation</em>. The coefficient matrix has 3 on the main diagonal, and -1 above and below it. This matrix is created with the help of <code class="code-inline tex2jax_ignore">diag</code> as explained in <a href="section-large-matrices.html" class="internal" title="Section 2.2: More tools for constructing matrices">Section 2.2</a>. The right-hand size column vector begins with all-zeros: note that <code class="code-inline tex2jax_ignore">zeros(n, 1)</code> is a column of zeros, while <code class="code-inline tex2jax_ignore">zeros(1, n)</code> is a row of zeros. The first and last entries of <code class="code-inline tex2jax_ignore">b</code> are changed as described in the system.</p>
 </div></div>
 </div></article></div>
-<article class="example example-like" id="example-2"><a data-knowl="" class="id-ref original" data-refid="hk-example-2"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.6.2</span><span class="period">.</span><span class="space"> </span><span class="title">Create a vector for use in Simpson's method.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-2"><article class="example example-like"><p id="p-33">Write a script that creates and displays a row vector with 25 elements of the form [1 4 2 4 2 ... 2 4 1]. This particular sequence of numbers is used in “Simpson's Method” of numerical integration which we will encounter later.</p>
-<div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-2" id="answer-2"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like">
-<pre class="code-block tex2jax_ignore">v = ones(1, 25);
-v(2:2:end) = 4;
-v(3:2:end-2) = 2;
-disp(v)
+<article class="example example-like" id="example-6"><a data-knowl="" class="id-ref original" data-refid="hk-example-6"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.3</span><span class="period">.</span><span class="space"> </span><span class="title">Plot of a function.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-6"><article class="example example-like">Plot the function \(y = (x - 1)/(x^2 + 1)\) on the interval \([-1, 5]\)<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-6" id="answer-6"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like">
+<pre class="code-block tex2jax_ignore">x = linspace(-1, 5, 500);	
+y = (x - 1)./(x.^2 + 1);
+plot(x, y)
 </pre>
-<p id="p-34"><em class="emphasis">Explanation</em>. The first line creates a vector of 25 ones, the second changes its even-numbered entries to 4, the third changes odd-numbered entries (except the first and last) to 2. Re-read <a href="section-indexing-vectors-matrices.html" class="internal" title="Section 1.5: Accessing the entries of vectors and matrices">Section 1.5</a> if this is unclear.</p>
-</div></div>
-</div></article></div>
-<article class="example example-like" id="example-3"><a data-knowl="" class="id-ref original" data-refid="hk-example-3"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.6.3</span><span class="period">.</span><span class="space"> </span><span class="title">Checkerboard matrix.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-3"><article class="example example-like"><p id="p-35">Create and display a “checkerboard” matrix of size 8<span class="times-sign">×</span>8: it should look like</p>
-<pre class="code-block tex2jax_ignore">
-1 0 1 0 ...
-0 1 0 1 ...
-1 0 1 0 ...
-...........
-</pre>
-<div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-3" id="answer-3"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like">
-<pre class="code-block tex2jax_ignore">A = zeros(8, 8);
-A(1:2:end, 1:2:end) = 1;
-A(2:2:end, 2:2:end) = 1;
-disp(A)
-</pre>
-<p id="p-36"><em class="emphasis">Explanation</em>. The first line creates an 8<span class="times-sign">×</span>8 matrix of zeros. The second works with the entries where both the row number and column number are <em class="emphasis">odd</em>, changing them to 1. The third does the same when both row and column numbers are <em class="emphasis">even</em>. The result is a checkerboard.</p>
+<figure class="figure figure-like" id="figure-4"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/plotting4.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.5.4<span class="period">.</span></span><span class="space"> </span>Plot of \(y = (x - 1)/(x^2 + 1)\) on \([-1, 5]\)</figcaption></figure><p id="p-60">Note the use of semicolons to prevent Matlab from displaying hundreds of numbers that we do not need to see.</p>
 </div></div>
 </div></article></div></section></div></main>
 </div>

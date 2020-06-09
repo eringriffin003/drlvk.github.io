@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-07T23:43:34-04:00    *-->
+<!--*    on 2020-06-08T20:49:39-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -67,10 +67,10 @@ MathJax.Hub.Config({
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-linear-systems.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="systems-vectorization-plots.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="part-equations.html" title="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-linear-systems.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="systems-vectorization-plots.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-vectorization.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-linear-systems.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="systems-vectorization-plots.html" title="Up">Up</a><a class="next-button button toolbar-item" href="part-equations.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-linear-systems.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="systems-vectorization-plots.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-vectorization.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -94,9 +94,13 @@ MathJax.Hub.Config({
 </ul>
 </li>
 <li class="link">
-<a href="systems-vectorization-plots.html" data-scroll="systems-vectorization-plots"><span class="codenumber">2</span> <span class="title">Linear systems, vectorized computations, plots</span></a><ul>
+<a href="systems-vectorization-plots.html" data-scroll="systems-vectorization-plots"><span class="codenumber">2</span> <span class="title">Linear systems, array operations, plots</span></a><ul>
 <li><a href="section-linear-systems.html" data-scroll="section-linear-systems">Systems of linear equations</a></li>
 <li><a href="section-large-matrices.html" data-scroll="section-large-matrices" class="active">More tools for constructing matrices</a></li>
+<li><a href="section-vectorization.html" data-scroll="section-vectorization">Array operations</a></li>
+<li><a href="section-plotting.html" data-scroll="section-plotting">Plotting</a></li>
+<li><a href="section-examples.html" data-scroll="section-examples">Examples</a></li>
+<li><a href="exercises-systems-vectorization-plots.html" data-scroll="exercises-systems-vectorization-plots">Homework</a></li>
 </ul>
 </li>
 <li class="link part"><a href="part-equations.html" data-scroll="part-equations"><span class="codenumber">II</span> <span class="title">Solving Equations</span></a></li>
@@ -141,22 +145,7 @@ I_3 = \begin{pmatrix} 1 \amp 0\amp 0 \\ 0\amp 1\amp 0 \\ 0\amp 0\amp 1 \end{pmat
 </div>
 <p data-braille="continuation">To construct such matrices we can use <code class="code-inline tex2jax_ignore">diag(v, k)</code> which places the elements of vector <code class="code-inline tex2jax_ignore">v</code> on the diagonal parallel to the main one but \(k\) positions above it. So, <code class="code-inline tex2jax_ignore">diag(v, 1)</code> is just above the main diagonal and <code class="code-inline tex2jax_ignore">diag(v, -1)</code> is just below. The matrix shown above could be formed as</p>
 <pre class="code-block tex2jax_ignore"> diag([2 2 2 2 2]) - diag([1 1 1 1], 1) - diag([1 1 1 1], -1)</pre>
-<p data-braille="continuation">This is an example of a <dfn class="terminology">tridiagonal matrix</dfn>: there are only three diagonals with nonzero entries.</p>
-<article class="example example-like" id="example-4"><a data-knowl="" class="id-ref original" data-refid="hk-example-4"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Tridiagonal matrix of arbitrary size.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-4"><article class="example example-like">Given a positive integer \(n\text{,}\) construct a tridiagonal matrix of the above form with size \(n\times n\text{.}\)<div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-4" id="answer-4"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like">
-<pre class="code-block tex2jax_ignore">diag(2*ones(1, n)) - diag(ones(1, n-1), 1) - diag(ones(1, n-1), -1)
-</pre>
-<p id="p-48">or</p>
-<pre class="code-block tex2jax_ignore">2*diag(ones(1, n)) - diag(ones(1, n-1), 1) - diag(ones(1, n-1), -1)
-</pre>
-<p id="p-49">or</p>
-<pre class="code-block tex2jax_ignore">2*eye(n) - diag(ones(1, n-1), 1) - diag(ones(1, n-1), -1)
-</pre>
-<p id="p-50">It is important to recognize why <code class="code-inline tex2jax_ignore">n-1</code> appears above. The main diagonal has length <code class="code-inline tex2jax_ignore">n</code> but the diagonals next to it are shorter by 1 element, so their length is <code class="code-inline tex2jax_ignore">n-1</code>.</p>
-</div></div>
-</div></article></div></section></div></main>
+<p data-braille="continuation">This is an example of a <dfn class="terminology">tridiagonal matrix</dfn>: there are only three diagonals with nonzero entries.</p></section></div></main>
 </div>
 </body>
 </html>
