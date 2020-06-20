@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-08T20:49:39-04:00    *-->
+<!--*    on 2020-06-20T19:40:43-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -61,16 +61,16 @@ MathJax.Hub.Config({
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="numerical-methods.html"><span class="title">Numerical Methods with Programming:</span> <span class="subtitle">Lecture notes</span></a></h1>
+<h1 class="heading"><a href="numerical-methods.html"><span class="title">Numerical Methods with Programming:</span> <span class="subtitle">Lecture Notes</span></a></h1>
 <p class="byline">Leonid Kovalev</p>
 </div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-examples.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="systems-vectorization-plots.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="part-equations.html" title="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="examples-systems-vectorization-plots.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="systems-vectorization-plots.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="part-equations.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-examples.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="systems-vectorization-plots.html" title="Up">Up</a><a class="next-button button toolbar-item" href="part-equations.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="examples-systems-vectorization-plots.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="systems-vectorization-plots.html" title="Up">Up</a><a class="next-button button toolbar-item" href="part-equations.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -89,7 +89,7 @@ MathJax.Hub.Config({
 <li><a href="section-vectors-matrices.html" data-scroll="section-vectors-matrices">Creating vectors and matrices</a></li>
 <li><a href="section-operations-vectors-matrices.html" data-scroll="section-operations-vectors-matrices">Operations on vectors and matrices</a></li>
 <li><a href="section-indexing-vectors-matrices.html" data-scroll="section-indexing-vectors-matrices">Accessing the entries of vectors and matrices</a></li>
-<li><a href="section-examples.html" data-scroll="section-examples">Examples</a></li>
+<li><a href="examples-matrices-vectors.html" data-scroll="examples-matrices-vectors">End-of-class examples</a></li>
 <li><a href="exercises-matrices-vectors.html" data-scroll="exercises-matrices-vectors">Homework</a></li>
 </ul>
 </li>
@@ -99,7 +99,7 @@ MathJax.Hub.Config({
 <li><a href="section-large-matrices.html" data-scroll="section-large-matrices">More tools for constructing matrices</a></li>
 <li><a href="section-vectorization.html" data-scroll="section-vectorization">Array operations</a></li>
 <li><a href="section-plotting.html" data-scroll="section-plotting">Plotting</a></li>
-<li><a href="section-examples.html" data-scroll="section-examples">Examples</a></li>
+<li><a href="examples-systems-vectorization-plots.html" data-scroll="examples-systems-vectorization-plots">End-of-class examples</a></li>
 <li><a href="exercises-systems-vectorization-plots.html" data-scroll="exercises-systems-vectorization-plots" class="active">Homework</a></li>
 </ul>
 </li>
@@ -113,13 +113,13 @@ MathJax.Hub.Config({
 <span class="type">Exercises</span> <span class="codenumber">2.6</span> <span class="title">Homework</span>
 </h2>
 <article class="exercise exercise-like" id="exercise-4"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-61">Consider the following relations: \(F_0=1\text{,}\) \(F_1=1\text{,}\) \(F_2 = F_0+F_1\text{,}\) \(F_3=F_1+F_2\text{,}\) and so on until \(F_{6} = F_4+F_5\text{.}\) (These are the first 7 Fibonacci numbers).</p>
+<p id="p-80">Consider the following relations: \(F_0=1\text{,}\) \(F_1=1\text{,}\) \(F_2 = F_0+F_1\text{,}\) \(F_3=F_1+F_2\text{,}\) and so on until \(F_{6} = F_4+F_5\text{.}\) (These are the first 7 Fibonacci numbers).</p>
 <ol class="lower-alpha">
 <li id="li-28">Write down a linear system that expresses these relations in matrix form \(Af =b\text{.}\) Here, \(A\) will be a 7<span class="times-sign">×</span>7 matrix and \(b\) a column vector.</li>
 <li id="li-29">Write a Matlab script that creates this matrix \(A\) and vector \(b\text{,}\) then solves the linear system to find the Fibonacci numbers.</li>
 </ol></article><article class="exercise exercise-like" id="exercise-5"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-62">Write a script to do the following:</p>
-<ol id="p-63" class="lower-alpha">
+<p id="p-81">Write a script to do the following:</p>
+<ol id="p-82" class="lower-alpha">
 <li id="li-30">Create a 10<span class="times-sign">×</span>10 matrix A with 2 on the main diagonal, and -1 next to it (both above and below).</li>
 <li id="li-31">Solve the linear system \(Ay=b\) where \(b\) is the vector<div class="displaymath">
 \begin{equation*}

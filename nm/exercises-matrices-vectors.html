@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-08T20:49:39-04:00    *-->
+<!--*    on 2020-06-20T19:40:43-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -61,16 +61,16 @@ MathJax.Hub.Config({
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="numerical-methods.html"><span class="title">Numerical Methods with Programming:</span> <span class="subtitle">Lecture notes</span></a></h1>
+<h1 class="heading"><a href="numerical-methods.html"><span class="title">Numerical Methods with Programming:</span> <span class="subtitle">Lecture Notes</span></a></h1>
 <p class="byline">Leonid Kovalev</p>
 </div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-examples.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="scalars-vectors-matrices.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="systems-vectorization-plots.html" title="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="examples-matrices-vectors.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="scalars-vectors-matrices.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="systems-vectorization-plots.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-examples.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="scalars-vectors-matrices.html" title="Up">Up</a><a class="next-button button toolbar-item" href="systems-vectorization-plots.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="examples-matrices-vectors.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="scalars-vectors-matrices.html" title="Up">Up</a><a class="next-button button toolbar-item" href="systems-vectorization-plots.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -89,7 +89,7 @@ MathJax.Hub.Config({
 <li><a href="section-vectors-matrices.html" data-scroll="section-vectors-matrices">Creating vectors and matrices</a></li>
 <li><a href="section-operations-vectors-matrices.html" data-scroll="section-operations-vectors-matrices">Operations on vectors and matrices</a></li>
 <li><a href="section-indexing-vectors-matrices.html" data-scroll="section-indexing-vectors-matrices">Accessing the entries of vectors and matrices</a></li>
-<li><a href="section-examples.html" data-scroll="section-examples">Examples</a></li>
+<li><a href="examples-matrices-vectors.html" data-scroll="examples-matrices-vectors">End-of-class examples</a></li>
 <li><a href="exercises-matrices-vectors.html" data-scroll="exercises-matrices-vectors" class="active">Homework</a></li>
 </ul>
 </li>
@@ -99,7 +99,7 @@ MathJax.Hub.Config({
 <li><a href="section-large-matrices.html" data-scroll="section-large-matrices">More tools for constructing matrices</a></li>
 <li><a href="section-vectorization.html" data-scroll="section-vectorization">Array operations</a></li>
 <li><a href="section-plotting.html" data-scroll="section-plotting">Plotting</a></li>
-<li><a href="section-examples.html" data-scroll="section-examples">Examples</a></li>
+<li><a href="examples-systems-vectorization-plots.html" data-scroll="examples-systems-vectorization-plots">End-of-class examples</a></li>
 <li><a href="exercises-systems-vectorization-plots.html" data-scroll="exercises-systems-vectorization-plots">Homework</a></li>
 </ul>
 </li>
@@ -113,7 +113,7 @@ MathJax.Hub.Config({
 <span class="type">Exercises</span> <span class="codenumber">1.7</span> <span class="title">Homework</span>
 </h2>
 <article class="exercise exercise-like" id="exercise-1"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-37">Suppose that <code class="code-inline tex2jax_ignore">A</code> is a matrix. Describe, in words, the following objects:</p>
+<p id="p-47">Suppose that <code class="code-inline tex2jax_ignore">A</code> is a matrix. Describe, in words, the following objects:</p>
 <ol class="lower-alpha">
 <li id="li-14"><code class="code-inline tex2jax_ignore">A(3, :)</code></li>
 <li id="li-15"><code class="code-inline tex2jax_ignore">A(:, end-2)</code></li>
@@ -121,7 +121,7 @@ MathJax.Hub.Config({
 <li id="li-17"><code class="code-inline tex2jax_ignore">A(1:2:end, 1)</code></li>
 <li id="li-18"><code class="code-inline tex2jax_ignore">A(:, end:-1:1)</code></li>
 </ol></article><article class="exercise exercise-like" id="exercise-2"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-38">Write a script to do the following:</p>
+<p id="p-48">Write a script to do the following:</p>
 <pre class="code-block tex2jax_ignore">x = (first 5 digits of your SUID);
 y = (all entries of x except first); 
 z = (all entries of x except last);
@@ -129,8 +129,8 @@ u = (the average of vectors y and z);
 v = (the scalar product of y and z);
 disp(u, v)
 </pre>
-<p id="p-39">Note that <code class="code-inline tex2jax_ignore">y</code> and <code class="code-inline tex2jax_ignore">z</code> must be computed from the vector x, not entered number-by-number.</p></article><article class="exercise exercise-like" id="exercise-3"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-40">Write a script that does the following:</p>
+<p id="p-49">Note that <code class="code-inline tex2jax_ignore">y</code> and <code class="code-inline tex2jax_ignore">z</code> must be computed from the vector x, not entered number-by-number.</p></article><article class="exercise exercise-like" id="exercise-3"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-50">Write a script that does the following:</p>
 <ol class="lower-alpha">
 <li id="li-19">Let <code class="code-inline tex2jax_ignore">A</code> be some 3 by 3 matrix filled with numbers 1,2,…,9</li>
 <li id="li-20">Let <code class="code-inline tex2jax_ignore">x</code> be the product of A and a row vector with all entries equal to 1 (think about the correct order of multiplication).</li>

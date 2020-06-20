@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-08T20:49:40-04:00    *-->
+<!--*    on 2020-06-20T19:40:43-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,11 +13,11 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Consider the following relations: \(F_0=1\text{,}\) \(F_1=1\text{,}\) \(F_2 = F_0+F_1\text{,}\) \(F_3=F_1+F_2\text{,}\) and so on until \(F_{6} = F_4+F_5\text{.}\) (These are the first 7 Fibonacci numbers).</p>
-<ol class="lower-alpha">
-<li>Write down a linear system that expresses these relations in matrix form \(Af =b\text{.}\) Here, \(A\) will be a 7<span class="times-sign">×</span>7 matrix and \(b\) a column vector.</li>
-<li>Write a Matlab script that creates this matrix \(A\) and vector \(b\text{,}\) then solves the linear system to find the Fibonacci numbers.</li>
-</ol>
-<span class="incontext"><a href="exercises-systems-vectorization-plots.html#p-61">in-context</a></span>
+<p>Matlab supports <dfn class="terminology">array operations</dfn> in which the input data is placed into an array (usually a vector or a matrix) and some mathematical operation is carried out on all of the data at once. For example, to get the square roots of the first 25 positive integers we can execute</p>
+<pre class="code-block tex2jax_ignore">sqrt(1:25)</pre>
+<p data-braille="continuation">with the result</p>
+<pre class="code-block tex2jax_ignore">[1.0000 1.4142 1.7321 2.0000 2.2361 ... 4.8990 5.0000]</pre>
+<p data-braille="continuation">More generally, if <code class="code-inline tex2jax_ignore">v</code> is a vector of nonnegative numbers, then <code class="code-inline tex2jax_ignore">sqrt(v)</code> has the roots of those numbers. Other functions like <code class="code-inline tex2jax_ignore">sin</code> and <code class="code-inline tex2jax_ignore">exp</code> work the same way. The benefts of array operations are more compact code and faster execution.</p>
+<span class="incontext"><a href="section-vectorization.html#p-61">in-context</a></span>
 </body>
 </html>

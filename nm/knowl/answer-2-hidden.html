@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-08T20:49:40-04:00    *-->
+<!--*    on 2020-06-20T19:40:43-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,11 +12,13 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="answer solution-like">
-<pre class="code-block tex2jax_ignore">v = ones(1, 25);
-v(2:2:end) = 4;
-v(3:2:end-2) = 2;
-disp(v)
+<pre class="code-block tex2jax_ignore">x = 4; 
+y = 7;
+a = (x+y)/2;
+g = sqrt(x*y);
+disp((a+g)/2)
+disp(sqrt(a*g))
 </pre>
-<p><em class="emphasis">Explanation</em>. The first line creates a vector of 25 ones, the second changes its even-numbered entries to 4, the third changes odd-numbered entries (except the first and last) to 2. Re-read <a href="section-indexing-vectors-matrices.html" class="internal" title="Section 1.5: Accessing the entries of vectors and matrices">Section 1.5</a> if this is unclear.</p>
+<p>Remark: Karl Gauss discovered that if the above process of taking arithmetic and geometric means is repeated, both these means <em class="emphasis">quickly</em> converge to the same number. This number is called the <dfn class="terminology">arithmetic-geometric mean</dfn> of x and y. It is linked to certain integrals which cannot be evaluated with calculus methods, and therefore provides an efficient computational approach to such integrals. For more, see <a class="external" href="https://en.wikipedia.org/wiki/Arithmetic%E2%80%93geometric_mean" target="_blank">Wikipedia</a>.</p>
 </div></body>
 </html>

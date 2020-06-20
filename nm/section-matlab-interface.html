@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-08T20:49:39-04:00    *-->
+<!--*    on 2020-06-20T19:40:43-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -61,7 +61,7 @@ MathJax.Hub.Config({
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="numerical-methods.html"><span class="title">Numerical Methods with Programming:</span> <span class="subtitle">Lecture notes</span></a></h1>
+<h1 class="heading"><a href="numerical-methods.html"><span class="title">Numerical Methods with Programming:</span> <span class="subtitle">Lecture Notes</span></a></h1>
 <p class="byline">Leonid Kovalev</p>
 </div>
 </div></div>
@@ -89,7 +89,7 @@ MathJax.Hub.Config({
 <li><a href="section-vectors-matrices.html" data-scroll="section-vectors-matrices">Creating vectors and matrices</a></li>
 <li><a href="section-operations-vectors-matrices.html" data-scroll="section-operations-vectors-matrices">Operations on vectors and matrices</a></li>
 <li><a href="section-indexing-vectors-matrices.html" data-scroll="section-indexing-vectors-matrices">Accessing the entries of vectors and matrices</a></li>
-<li><a href="section-examples.html" data-scroll="section-examples">Examples</a></li>
+<li><a href="examples-matrices-vectors.html" data-scroll="examples-matrices-vectors">End-of-class examples</a></li>
 <li><a href="exercises-matrices-vectors.html" data-scroll="exercises-matrices-vectors">Homework</a></li>
 </ul>
 </li>
@@ -99,7 +99,7 @@ MathJax.Hub.Config({
 <li><a href="section-large-matrices.html" data-scroll="section-large-matrices">More tools for constructing matrices</a></li>
 <li><a href="section-vectorization.html" data-scroll="section-vectorization">Array operations</a></li>
 <li><a href="section-plotting.html" data-scroll="section-plotting">Plotting</a></li>
-<li><a href="section-examples.html" data-scroll="section-examples">Examples</a></li>
+<li><a href="examples-systems-vectorization-plots.html" data-scroll="examples-systems-vectorization-plots">End-of-class examples</a></li>
 <li><a href="exercises-systems-vectorization-plots.html" data-scroll="exercises-systems-vectorization-plots">Homework</a></li>
 </ul>
 </li>
@@ -113,7 +113,19 @@ MathJax.Hub.Config({
 <span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">Matlab interface</span>
 </h2>
 <p id="p-13">The first thing you see in Matlab is its <dfn class="terminology">Command Window</dfn> where the prompt <code class="code-inline tex2jax_ignore">&gt;&gt;</code> invites you to enter any command that will be executed at once. This window is useful for quickly trying out things. You should use it to try out the one-line examples that appear in the text of these notes.</p>
-<p id="p-14">Most of our work, including homework assignments, will involve <dfn class="terminology">Script Editor</dfn>. To open this editor, click “New Script” button on the left of the “Home” menu of Matlab. The chain of commands entered in the editor forms a script. The button “Run” of the “Editor” menu runs a script; pressing <kbd class="kbdkey">F5</kbd> does the same. The output of the script computations is shown in the Command Window.</p></section></div></main>
+<p id="p-14">Most of our work, including homework assignments, will involve <dfn class="terminology">Script Editor</dfn>. To open this editor, click “New Script” button on the left of the “Home” menu of Matlab. The chain of commands entered in the editor forms a script. The button “Run” of the “Editor” menu runs a script; pressing <kbd class="kbdkey">F5</kbd> does the same.</p>
+<p id="p-15">The result of script computations can be shown in the Command Window. There are several ways to make it appear. One of them is <code class="code-inline tex2jax_ignore">disp</code> command: for example,</p>
+<pre class="code-block tex2jax_ignore">disp('Hello world')</pre>
+<p data-braille="continuation">displays "Hello world", and</p>
+<pre class="code-block tex2jax_ignore">disp(2/3)</pre>
+<p data-braille="continuation">displays 0.6667. Notice that Matlab displays just four digits after the decimal dot. This is intentional: showing fewer digits of each number makes is possible to fit more of them on the screen. There are ways to change the number format to display more digits, which we will consider later.</p>
+<article class="example example-like" id="example-1"><a data-knowl="" class="id-ref original" data-refid="hk-example-1"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Golden ratio.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-1"><article class="example example-like"><p id="p-16">Write a script that displays an approximate decimal value of the <dfn class="terminology">golden ratio</dfn> \(\dfrac{\sqrt{5}+1}{2}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-1" id="answer-1"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><pre class="code-block tex2jax_ignore">disp((sqrt(5)+1)/2)
+</pre></div></div>
+</div></article></div></section></div></main>
 </div>
 </body>
 </html>

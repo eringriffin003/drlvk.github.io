@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-08T20:49:40-04:00    *-->
+<!--*    on 2020-06-20T19:40:43-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,15 +11,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="answer solution-like">
-<pre class="code-block tex2jax_ignore">n = 28;
-A = 3*eye(n) - diag(ones(1, n-1), 1) - diag(ones(1, n-1), -1);
-b = zeros(n, 1);
-b(1) = 1;
-b(end) = 2;
-x = A\b;
-disp(x)
-</pre>
-<p><em class="emphasis">Explanation</em>. The coefficient matrix has 3 on the main diagonal, and -1 above and below it. This matrix is created with the help of <code class="code-inline tex2jax_ignore">diag</code> as explained in <a href="section-large-matrices.html" class="internal" title="Section 2.2: More tools for constructing matrices">Section 2.2</a>. The right-hand size column vector begins with all-zeros: note that <code class="code-inline tex2jax_ignore">zeros(n, 1)</code> is a column of zeros, while <code class="code-inline tex2jax_ignore">zeros(1, n)</code> is a row of zeros. The first and last entries of <code class="code-inline tex2jax_ignore">b</code> are changed as described in the system.</p>
-</div></body>
+<body><div class="answer solution-like"><pre class="code-block tex2jax_ignore">A = [1 2 3 4; 5 6 7 8; 9 10 11 12; 13 14 15 16];
+B = A(2:3, 2:3);
+disp(B)
+</pre></div></body>
 </html>

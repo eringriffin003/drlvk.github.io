@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-08T20:49:40-04:00    *-->
+<!--*    on 2020-06-20T19:40:43-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,21 +13,14 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Some problems in engineering and in differential equations lead to matrices where nonzero coefficients are <em class="emphasis">close</em> to the main diagonal but not exactly at it: for example,</p>
-<div class="displaymath">
-\begin{equation*}
-\begin{pmatrix}
-2 \amp -1 \amp 0\amp 0 \amp 0 \\ 
--1 \amp 2 \amp -1\amp 0 \amp 0 \\ 
-0 \amp -1 \amp 2\amp -1 \amp 0 \\ 
-0 \amp 0 \amp -1\amp 2 \amp -1 \\ 
-0 \amp 0 \amp 0\amp -1 \amp 2 \\ 
-\end{pmatrix}
-\end{equation*}
-</div>
-<p data-braille="continuation">To construct such matrices we can use <code class="code-inline tex2jax_ignore">diag(v, k)</code> which places the elements of vector <code class="code-inline tex2jax_ignore">v</code> on the diagonal parallel to the main one but \(k\) positions above it. So, <code class="code-inline tex2jax_ignore">diag(v, 1)</code> is just above the main diagonal and <code class="code-inline tex2jax_ignore">diag(v, -1)</code> is just below. The matrix shown above could be formed as</p>
-<pre class="code-block tex2jax_ignore"> diag([2 2 2 2 2]) - diag([1 1 1 1], 1) - diag([1 1 1 1], -1)</pre>
-<p data-braille="continuation">This is an example of a <dfn class="terminology">tridiagonal matrix</dfn>: there are only three diagonals with nonzero entries.</p>
-<span class="incontext"><a href="section-large-matrices.html#p-47">in-context</a></span>
+<p>Suppose that <code class="code-inline tex2jax_ignore">A</code> is a matrix. Describe, in words, the following objects:</p>
+<ol class="lower-alpha">
+<li><code class="code-inline tex2jax_ignore">A(3, :)</code></li>
+<li><code class="code-inline tex2jax_ignore">A(:, end-2)</code></li>
+<li><code class="code-inline tex2jax_ignore">A(1:2, end-1:end)</code></li>
+<li><code class="code-inline tex2jax_ignore">A(1:2:end, 1)</code></li>
+<li><code class="code-inline tex2jax_ignore">A(:, end:-1:1)</code></li>
+</ol>
+<span class="incontext"><a href="exercises-matrices-vectors.html#p-47">in-context</a></span>
 </body>
 </html>

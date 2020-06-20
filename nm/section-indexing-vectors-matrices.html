@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-08T20:49:39-04:00    *-->
+<!--*    on 2020-06-20T19:40:43-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -61,16 +61,16 @@ MathJax.Hub.Config({
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="numerical-methods.html"><span class="title">Numerical Methods with Programming:</span> <span class="subtitle">Lecture notes</span></a></h1>
+<h1 class="heading"><a href="numerical-methods.html"><span class="title">Numerical Methods with Programming:</span> <span class="subtitle">Lecture Notes</span></a></h1>
 <p class="byline">Leonid Kovalev</p>
 </div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-operations-vectors-matrices.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="scalars-vectors-matrices.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-examples.html" title="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-operations-vectors-matrices.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="scalars-vectors-matrices.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="examples-matrices-vectors.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-operations-vectors-matrices.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="scalars-vectors-matrices.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-examples.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-operations-vectors-matrices.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="scalars-vectors-matrices.html" title="Up">Up</a><a class="next-button button toolbar-item" href="examples-matrices-vectors.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -89,7 +89,7 @@ MathJax.Hub.Config({
 <li><a href="section-vectors-matrices.html" data-scroll="section-vectors-matrices">Creating vectors and matrices</a></li>
 <li><a href="section-operations-vectors-matrices.html" data-scroll="section-operations-vectors-matrices">Operations on vectors and matrices</a></li>
 <li><a href="section-indexing-vectors-matrices.html" data-scroll="section-indexing-vectors-matrices" class="active">Accessing the entries of vectors and matrices</a></li>
-<li><a href="section-examples.html" data-scroll="section-examples">Examples</a></li>
+<li><a href="examples-matrices-vectors.html" data-scroll="examples-matrices-vectors">End-of-class examples</a></li>
 <li><a href="exercises-matrices-vectors.html" data-scroll="exercises-matrices-vectors">Homework</a></li>
 </ul>
 </li>
@@ -99,7 +99,7 @@ MathJax.Hub.Config({
 <li><a href="section-large-matrices.html" data-scroll="section-large-matrices">More tools for constructing matrices</a></li>
 <li><a href="section-vectorization.html" data-scroll="section-vectorization">Array operations</a></li>
 <li><a href="section-plotting.html" data-scroll="section-plotting">Plotting</a></li>
-<li><a href="section-examples.html" data-scroll="section-examples">Examples</a></li>
+<li><a href="examples-systems-vectorization-plots.html" data-scroll="examples-systems-vectorization-plots">End-of-class examples</a></li>
 <li><a href="exercises-systems-vectorization-plots.html" data-scroll="exercises-systems-vectorization-plots">Homework</a></li>
 </ul>
 </li>
@@ -112,10 +112,24 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="section-indexing-vectors-matrices"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.5</span> <span class="title">Accessing the entries of vectors and matrices</span>
 </h2>
-<p id="p-26">We often need to manipulate matrices and vectors by extracting, replacing or rearranging some elements. The elements are indexed <em class="emphasis">starting with 1</em>: so, after executing <code class="code-inline tex2jax_ignore">v = [8 6 -4]</code> we find that <code class="code-inline tex2jax_ignore">v(1)</code> is 8, <code class="code-inline tex2jax_ignore">v(2)</code> is 6, and <code class="code-inline tex2jax_ignore">v(3)</code> is -4. One can also use indexing from the end of the vector: <code class="code-inline tex2jax_ignore">v(end)</code> is -4, <code class="code-inline tex2jax_ignore">v(end-1)</code> is 6, and so on. For a matrix the indexes are ordered as (row, column). So, if <code class="code-inline tex2jax_ignore">A = [5 6 7; 9 8 6]</code>, then <code class="code-inline tex2jax_ignore">A(1, 3)</code> is 7 and <code class="code-inline tex2jax_ignore">A(2, 1)</code> is 9.</p>
-<p id="p-27">A powerful tool for working with matrices is the <dfn class="terminology">colon : selector</dfn>. When it replaces an index, it means “run through all values of that index”. Given a matrix A, we can use <code class="code-inline tex2jax_ignore">A(1, :)</code> to get its first row, <code class="code-inline tex2jax_ignore">A(:, 2)</code> to get the second column, and <code class="code-inline tex2jax_ignore">A(:, end)</code> for the last column.</p>
-<p id="p-28">We can use a <dfn class="terminology">vector of indexes</dfn> to extract several elements of a vector or a matrix. For example, <code class="code-inline tex2jax_ignore">v(3:end-1)</code> extracts all entries of <code class="code-inline tex2jax_ignore">v</code> starting with the 3rd one and ending with the one before the last. If <code class="code-inline tex2jax_ignore">v</code> was <code class="code-inline tex2jax_ignore">[8 6 4 3 2 1]</code>, the result would be <code class="code-inline tex2jax_ignore">[4 3 2]</code>. For another example, <code class="code-inline tex2jax_ignore">v(2:2:end)</code> extracts all even-numbered elements of v. In the above example this would be <code class="code-inline tex2jax_ignore">[6 3 1]</code>. For a matrix <code class="code-inline tex2jax_ignore">A</code>, we can select both rows and columns at the same time: <code class="code-inline tex2jax_ignore">A(2:3, 2:5)</code> means taking the elements of <code class="code-inline tex2jax_ignore">A</code> that appear in rows 2-3 and in columns 2-5. The result is a submatrix of size 2<span class="times-sign">×</span>4.</p>
-<p id="p-29">The entries can also be assigned, for example <code class="code-inline tex2jax_ignore">v(2:2:end) = -3</code> makes all even-numbered entries of vector <code class="code-inline tex2jax_ignore">v</code> equal to -3.</p></section></div></main>
+<p id="p-35">We often need to manipulate matrices and vectors by extracting, replacing or rearranging some elements. The elements are indexed <em class="emphasis">starting with 1</em>: so, after executing <code class="code-inline tex2jax_ignore">v = [8 6 -4]</code> we find that <code class="code-inline tex2jax_ignore">v(1)</code> is 8, <code class="code-inline tex2jax_ignore">v(2)</code> is 6, and <code class="code-inline tex2jax_ignore">v(3)</code> is -4. One can also use indexing from the end of the vector: <code class="code-inline tex2jax_ignore">v(end)</code> is -4, <code class="code-inline tex2jax_ignore">v(end-1)</code> is 6, and so on. For a matrix the indexes are ordered as (row, column). So, if <code class="code-inline tex2jax_ignore">A = [5 6 7; 9 8 6]</code>, then <code class="code-inline tex2jax_ignore">A(1, 3)</code> is 7 and <code class="code-inline tex2jax_ignore">A(2, 1)</code> is 9.</p>
+<p id="p-36">A powerful tool for working with matrices is the <dfn class="terminology">colon : selector</dfn>. When it replaces an index, it means “run through all values of that index”. Given a matrix A, we can use <code class="code-inline tex2jax_ignore">A(1, :)</code> to get its first row, <code class="code-inline tex2jax_ignore">A(:, 2)</code> to get the second column, and <code class="code-inline tex2jax_ignore">A(:, end)</code> for the last column.</p>
+<p id="p-37">We can use a <dfn class="terminology">vector of indexes</dfn> to extract several elements of a vector or a matrix. For example, <code class="code-inline tex2jax_ignore">v(3:end-1)</code> extracts all entries of <code class="code-inline tex2jax_ignore">v</code> starting with the 3rd one and ending with the one before the last. If <code class="code-inline tex2jax_ignore">v</code> was <code class="code-inline tex2jax_ignore">[8 6 4 3 2 1]</code>, the result would be <code class="code-inline tex2jax_ignore">[4 3 2]</code>. For another example, <code class="code-inline tex2jax_ignore">v(2:2:end)</code> extracts all even-numbered elements of v. In the above example this would be <code class="code-inline tex2jax_ignore">[6 3 1]</code>. For a matrix <code class="code-inline tex2jax_ignore">A</code>, we can select both rows and columns at the same time: <code class="code-inline tex2jax_ignore">A(2:3, 2:5)</code> means taking the elements of <code class="code-inline tex2jax_ignore">A</code> that appear in rows 2-3 and in columns 2-5. The result is a submatrix of size 2<span class="times-sign">×</span>4.</p>
+<p id="p-38">The entries can also be assigned, for example <code class="code-inline tex2jax_ignore">v(2:2:end) = -3</code> makes all even-numbered entries of vector <code class="code-inline tex2jax_ignore">v</code> equal to -3.</p>
+<article class="example example-like" id="example-5"><a data-knowl="" class="id-ref original" data-refid="hk-example-5"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.1</span><span class="period">.</span><span class="space"> </span><span class="title">Extracting submatrices..</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-5"><article class="example example-like"><p id="p-39">Display the 2<span class="times-sign">×</span>2 submatrix in the middle of a given 4<span class="times-sign">×</span>4 matrix such as</p>
+<div class="displaymath">
+\begin{equation*}
+A = \begin{pmatrix} 1 \amp 2\amp 3\amp 4 \\ 5\amp 6\amp 7\amp 8 \\ 9\amp 10\amp 11\amp 12 \\ 13\amp 14\amp 15\amp 16 \end{pmatrix}
+\end{equation*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-5" id="answer-5"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><pre class="code-block tex2jax_ignore">A = [1 2 3 4; 5 6 7 8; 9 10 11 12; 13 14 15 16];
+B = A(2:3, 2:3);
+disp(B)
+</pre></div></div>
+</div></article></div></section></div></main>
 </div>
 </body>
 </html>
