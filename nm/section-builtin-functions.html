@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-06-21T18:16:55-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Built-in functions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="numerical-methods.html"><span class="title">Numerical Methods with Programming:</span> <span class="subtitle">Lecture Notes</span></a></h1>
+<p class="byline">Leonid Kovalev</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="systems-functions-input-output.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="systems-functions-input-output.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-random-numbers-histograms.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="systems-functions-input-output.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="systems-functions-input-output.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-random-numbers-histograms.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="acknowledgement.html" data-scroll="acknowledgement">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="preface">Preface</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-matlab.html" data-scroll="part-matlab"><span class="codenumber">I</span> <span class="title">Using Matlab</span></a></li>
+<li class="link">
+<a href="scalars-vectors-matrices.html" data-scroll="scalars-vectors-matrices"><span class="codenumber">1</span> <span class="title">Scalars, vectors and matrices</span></a><ul>
+<li><a href="section-matlab-interface.html" data-scroll="section-matlab-interface">Matlab interface</a></li>
+<li><a href="section-scalars.html" data-scroll="section-scalars">Assigning scalar values</a></li>
+<li><a href="section-vectors-matrices.html" data-scroll="section-vectors-matrices">Creating vectors and matrices</a></li>
+<li><a href="section-operations-vectors-matrices.html" data-scroll="section-operations-vectors-matrices">Operations on vectors and matrices</a></li>
+<li><a href="section-indexing-vectors-matrices.html" data-scroll="section-indexing-vectors-matrices">Accessing the entries of vectors and matrices</a></li>
+<li><a href="examples-matrices-vectors.html" data-scroll="examples-matrices-vectors">End-of-class examples</a></li>
+<li><a href="exercises-matrices-vectors.html" data-scroll="exercises-matrices-vectors">Homework</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="systems-vectorization-plots.html" data-scroll="systems-vectorization-plots"><span class="codenumber">2</span> <span class="title">Linear systems, array operations, plots</span></a><ul>
+<li><a href="section-linear-systems.html" data-scroll="section-linear-systems">Systems of linear equations</a></li>
+<li><a href="section-large-matrices.html" data-scroll="section-large-matrices">More tools for constructing matrices</a></li>
+<li><a href="section-vectorization.html" data-scroll="section-vectorization">Array operations</a></li>
+<li><a href="section-plotting.html" data-scroll="section-plotting">Plotting</a></li>
+<li><a href="examples-systems-vectorization-plots.html" data-scroll="examples-systems-vectorization-plots">End-of-class examples</a></li>
+<li><a href="exercises-systems-vectorization-plots.html" data-scroll="exercises-systems-vectorization-plots">Homework</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="systems-functions-input-output.html" data-scroll="systems-functions-input-output"><span class="codenumber">3</span> <span class="title">Built-in functions, input, output</span></a><ul>
+<li><a href="section-builtin-functions.html" data-scroll="section-builtin-functions" class="active">Built-in functions</a></li>
+<li><a href="section-random-numbers-histograms.html" data-scroll="section-random-numbers-histograms">Random numbers and histograms</a></li>
+<li><a href="section-user-input.html" data-scroll="section-user-input">User input</a></li>
+<li><a href="section-formatted-output.html" data-scroll="section-formatted-output">Formatted output</a></li>
+<li><a href="examples-functions-input-output.html" data-scroll="examples-functions-input-output">End-of-class examples</a></li>
+<li><a href="exercises-functions-input-output.html" data-scroll="exercises-functions-input-output">Homework</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-equations.html" data-scroll="part-equations"><span class="codenumber">II</span> <span class="title">Solving Equations</span></a></li>
+<li class="link part"><a href="part-calculus.html" data-scroll="part-calculus"><span class="codenumber">III</span> <span class="title">Numerical Calculus</span></a></li>
+<li class="link part"><a href="part-data.html" data-scroll="part-data"><span class="codenumber">IV</span> <span class="title">Modeling Data</span></a></li>
+<li class="link part"><a href="part-optimization.html" data-scroll="part-optimization"><span class="codenumber">V</span> <span class="title">Optimization</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-builtin-functions"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.1</span> <span class="title">Built-in functions</span>
+</h2>
+<p id="p-84">Mathematical functions in Matlab have recognizable names: <code class="code-inline tex2jax_ignore">sqrt</code>, <code class="code-inline tex2jax_ignore">log</code> (meaning natural logarithm, base e), <code class="code-inline tex2jax_ignore">exp</code>, <code class="code-inline tex2jax_ignore">abs</code> (absolute value), <code class="code-inline tex2jax_ignore">sin</code>, <code class="code-inline tex2jax_ignore">cos</code> and so on. They can be applied to vectors or matrices elementwise: for example <code class="code-inline tex2jax_ignore">exp([1 2 3])</code> returns a vector with components \(e^1, e^2, e^3\text{.}\)</p>
+<p id="p-85">There are also <dfn class="terminology">aggregate functions</dfn> which are useful for summarizing data. The most important of these are <code class="code-inline tex2jax_ignore">sum</code> (sum of values), <code class="code-inline tex2jax_ignore">max</code> (maximum) and <code class="code-inline tex2jax_ignore">min</code> (minimum). When applied to a vector, these functions return a single number. So, if <code class="code-inline tex2jax_ignore">v = [3 1 4 1]</code> then <code class="code-inline tex2jax_ignore">sum(v)</code> is 9, <code class="code-inline tex2jax_ignore">max(v)</code> is 4, and <code class="code-inline tex2jax_ignore">min(v)</code> is 1.</p>
+<article class="example example-like" id="example-16"><a data-knowl="" class="id-ref original" data-refid="hk-example-16"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Sum of cubes.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-16"><article class="example example-like"><p id="p-86">Find the sum of cubes of the integers from 1 to 10.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-16" id="answer-16"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-16"><div class="answer solution-like">
+<pre class="code-block tex2jax_ignore">sum((1:10).^3)
+</pre>
+<p id="p-87">Note that the parentheses are important here: <code class="code-inline tex2jax_ignore">sum(1:10.^3)</code> would be the sum of all integers from 1 to 1000.</p>
+</div></div>
+</div></article></div>
+<p id="p-88">Aggregate functions get more complicated (and powerful) when they are applied to matrices. In this case they <em class="emphasis">do not</em> return a single number. Given a matrix A, for example <code class="code-inline tex2jax_ignore">A = [3 9; 5 2]</code>, we can find its:</p>
+<ul class="disc">
+<li id="li-33">
+<dfn class="terminology">Column sums</dfn> with <code class="code-inline tex2jax_ignore">sum(A, 1)</code>: the result is a row vector <code class="code-inline tex2jax_ignore">[8 11]</code> which contains the sum of each column.</li>
+<li id="li-34">
+<dfn class="terminology">Row sums</dfn> with <code class="code-inline tex2jax_ignore">sum(A, 2)</code>: the result is a column vector <code class="code-inline tex2jax_ignore">[12; 7]</code> which contains the sum of each row.</li>
+</ul>
+<p data-braille="continuation">The second argument (1 or 2) means that we sum along the 1st index (row index) or 2nd index (column index). Summing along the row index means A(1, 1) + A(2, 1) + A(3, 1) + ... which produces the sum within each column. Entering <code class="code-inline tex2jax_ignore">sum(A)</code> has the same effect as <code class="code-inline tex2jax_ignore">sum(A, 1)</code>.</p>
+<p id="p-89"><em class="emphasis">Stacking the columns of a matrix</em>. When we want the sum (or another aggregate function) of all entries of matrix A, we can <dfn class="terminology">stack</dfn> the columns of A using a single colon: <code class="code-inline tex2jax_ignore">A(:)</code>. Then an aggregate function can be applied to this column. For example, if <code class="code-inline tex2jax_ignore">A = [1 2; 3 4]</code> then <code class="code-inline tex2jax_ignore">A(:)</code> is the column <code class="code-inline tex2jax_ignore">[1; 3; 2; 4]</code> and <code class="code-inline tex2jax_ignore">sum(A(:))</code> is 10.</p>
+<article class="example example-like" id="example-17"><a data-knowl="" class="id-ref original" data-refid="hk-example-17"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Maximum and minimum of row sums.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-17"><article class="example example-like"><p id="p-90">Given a matrix, such as <code class="code-inline tex2jax_ignore">A = [3 6; -8 4; 10 1]</code> find its “maximal absolute row sum”, meaning add up the absolute values of the elements within each row, and take the maximum of the results.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-17" id="answer-17"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-17"><div class="answer solution-like">
+<pre class="code-block tex2jax_ignore">max(sum(abs(A), 2))
+</pre>
+<p id="p-91">The result is 12, coming from the second row. The maximal absolute row sum is important in applied linear algebra. It is one of several <dfn class="terminology">norms</dfn> that can be defined for a matrix.</p>
+</div></div>
+</div></article></div></section></div></main>
+</div>
+</body>
+</html>
