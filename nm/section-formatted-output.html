@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-06-21T18:16:55-04:00    *-->
+<!--*    on 2020-06-23T20:51:18-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -113,6 +113,16 @@ MathJax.Hub.Config({
 <li><a href="exercises-functions-input-output.html" data-scroll="exercises-functions-input-output">Homework</a></li>
 </ul>
 </li>
+<li class="link">
+<a href="systems-control-flow.html" data-scroll="systems-control-flow"><span class="codenumber">4</span> <span class="title">Control flow: loops and conditional statements</span></a><ul>
+<li><a href="section-for-loop.html" data-scroll="section-for-loop"><code class="code-inline tex2jax_ignore">for</code> loop</a></li>
+<li><a href="section-while-loop.html" data-scroll="section-while-loop"><code class="code-inline tex2jax_ignore">while</code> loop</a></li>
+<li><a href="section-if-statement.html" data-scroll="section-if-statement"><code class="code-inline tex2jax_ignore">if</code> statement</a></li>
+<li><a href="section-break-statement.html" data-scroll="section-break-statement">Breaking out of a loop</a></li>
+<li><a href="examples-control-flow.html" data-scroll="examples-control-flow">End-of-class examples</a></li>
+<li><a href="exercises-control-flow.html" data-scroll="exercises-control-flow">Homework</a></li>
+</ul>
+</li>
 <li class="link part"><a href="part-equations.html" data-scroll="part-equations"><span class="codenumber">II</span> <span class="title">Solving Equations</span></a></li>
 <li class="link part"><a href="part-calculus.html" data-scroll="part-calculus"><span class="codenumber">III</span> <span class="title">Numerical Calculus</span></a></li>
 <li class="link part"><a href="part-data.html" data-scroll="part-data"><span class="codenumber">IV</span> <span class="title">Modeling Data</span></a></li>
@@ -134,7 +144,8 @@ MathJax.Hub.Config({
 <p id="p-99">Note that 15-16 decimal digits is about the limit of precision in Matlab computations. If we try <code class="code-inline tex2jax_ignore">fprintf('The number pi is %.20f\n', pi)</code> the output is “The number pi is 3.14159265358979310000” which looks suspicious, and for a good reason: the zeros at the end are not correct digits of pi.</p>
 <p id="p-100">For very large or very small numbers we need exponential notation. For example, if you ask Matlab to compute <code class="code-inline tex2jax_ignore">pi^100</code> it will display the answer as <code class="code-inline tex2jax_ignore">5.1878e+49</code>. This means \(5.1878 \cdot 10^{49}\text{.}\) The number after the letter e is the power of 10 by which we should multiply the number before “e”. The letter “e” stands for “exponential” not for the mathematical constant e. To use exponential notation in formatted strings, replace letter <code class="code-inline tex2jax_ignore">f</code> in formatting codes by <code class="code-inline tex2jax_ignore">e</code>. To remember these, note that <code class="code-inline tex2jax_ignore">f</code> means Fixed decimal point, and <code class="code-inline tex2jax_ignore">e</code> means Exponential notation.</p>
 <pre class="code-block tex2jax_ignore">fprintf('The 100th power of pi is %.6e\n', pi^100)</pre>
-<p data-braille="continuation">displays the result as “The 100th power of pi is 5.187848e+49”.</p></section></div></main>
+<p data-braille="continuation">displays the result as “The 100th power of pi is 5.187848e+49”.</p>
+<p id="p-101">There is also a formatting code <code class="code-inline tex2jax_ignore">%d</code> to be used for integers, when you do not want a decimal dot at all.</p></section></div></main>
 </div>
 </body>
 </html>

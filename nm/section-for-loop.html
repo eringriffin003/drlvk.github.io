@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-06-23T20:51:18-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>
+<code class="code-inline tex2jax_ignore">for</code> loop</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="numerical-methods.html"><span class="title">Numerical Methods with Programming:</span> <span class="subtitle">Lecture Notes</span></a></h1>
+<p class="byline">Leonid Kovalev</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="systems-control-flow.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="systems-control-flow.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-while-loop.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="systems-control-flow.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="systems-control-flow.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-while-loop.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="acknowledgement.html" data-scroll="acknowledgement">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="preface">Preface</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-matlab.html" data-scroll="part-matlab"><span class="codenumber">I</span> <span class="title">Using Matlab</span></a></li>
+<li class="link">
+<a href="scalars-vectors-matrices.html" data-scroll="scalars-vectors-matrices"><span class="codenumber">1</span> <span class="title">Scalars, vectors and matrices</span></a><ul>
+<li><a href="section-matlab-interface.html" data-scroll="section-matlab-interface">Matlab interface</a></li>
+<li><a href="section-scalars.html" data-scroll="section-scalars">Assigning scalar values</a></li>
+<li><a href="section-vectors-matrices.html" data-scroll="section-vectors-matrices">Creating vectors and matrices</a></li>
+<li><a href="section-operations-vectors-matrices.html" data-scroll="section-operations-vectors-matrices">Operations on vectors and matrices</a></li>
+<li><a href="section-indexing-vectors-matrices.html" data-scroll="section-indexing-vectors-matrices">Accessing the entries of vectors and matrices</a></li>
+<li><a href="examples-matrices-vectors.html" data-scroll="examples-matrices-vectors">End-of-class examples</a></li>
+<li><a href="exercises-matrices-vectors.html" data-scroll="exercises-matrices-vectors">Homework</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="systems-vectorization-plots.html" data-scroll="systems-vectorization-plots"><span class="codenumber">2</span> <span class="title">Linear systems, array operations, plots</span></a><ul>
+<li><a href="section-linear-systems.html" data-scroll="section-linear-systems">Systems of linear equations</a></li>
+<li><a href="section-large-matrices.html" data-scroll="section-large-matrices">More tools for constructing matrices</a></li>
+<li><a href="section-vectorization.html" data-scroll="section-vectorization">Array operations</a></li>
+<li><a href="section-plotting.html" data-scroll="section-plotting">Plotting</a></li>
+<li><a href="examples-systems-vectorization-plots.html" data-scroll="examples-systems-vectorization-plots">End-of-class examples</a></li>
+<li><a href="exercises-systems-vectorization-plots.html" data-scroll="exercises-systems-vectorization-plots">Homework</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="systems-functions-input-output.html" data-scroll="systems-functions-input-output"><span class="codenumber">3</span> <span class="title">Built-in functions, input, output</span></a><ul>
+<li><a href="section-builtin-functions.html" data-scroll="section-builtin-functions">Built-in functions</a></li>
+<li><a href="section-random-numbers-histograms.html" data-scroll="section-random-numbers-histograms">Random numbers and histograms</a></li>
+<li><a href="section-user-input.html" data-scroll="section-user-input">User input</a></li>
+<li><a href="section-formatted-output.html" data-scroll="section-formatted-output">Formatted output</a></li>
+<li><a href="examples-functions-input-output.html" data-scroll="examples-functions-input-output">End-of-class examples</a></li>
+<li><a href="exercises-functions-input-output.html" data-scroll="exercises-functions-input-output">Homework</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="systems-control-flow.html" data-scroll="systems-control-flow"><span class="codenumber">4</span> <span class="title">Control flow: loops and conditional statements</span></a><ul>
+<li><a href="section-for-loop.html" data-scroll="section-for-loop" class="active"><code class="code-inline tex2jax_ignore">for</code> loop</a></li>
+<li><a href="section-while-loop.html" data-scroll="section-while-loop"><code class="code-inline tex2jax_ignore">while</code> loop</a></li>
+<li><a href="section-if-statement.html" data-scroll="section-if-statement"><code class="code-inline tex2jax_ignore">if</code> statement</a></li>
+<li><a href="section-break-statement.html" data-scroll="section-break-statement">Breaking out of a loop</a></li>
+<li><a href="examples-control-flow.html" data-scroll="examples-control-flow">End-of-class examples</a></li>
+<li><a href="exercises-control-flow.html" data-scroll="exercises-control-flow">Homework</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-equations.html" data-scroll="part-equations"><span class="codenumber">II</span> <span class="title">Solving Equations</span></a></li>
+<li class="link part"><a href="part-calculus.html" data-scroll="part-calculus"><span class="codenumber">III</span> <span class="title">Numerical Calculus</span></a></li>
+<li class="link part"><a href="part-data.html" data-scroll="part-data"><span class="codenumber">IV</span> <span class="title">Modeling Data</span></a></li>
+<li class="link part"><a href="part-optimization.html" data-scroll="part-optimization"><span class="codenumber">V</span> <span class="title">Optimization</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-for-loop"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.1</span> <span class="title"><code class="code-inline tex2jax_ignore">for</code> loop</span>
+</h2>
+<p id="p-112">Syntax of <code class="code-inline tex2jax_ignore">for</code> loop:</p>
+<pre class="code-block tex2jax_ignore">
+for (variable) = (some vector, usually regularly spaced a:h:b) 
+    (some computation)
+end
+</pre>
+<p data-braille="continuation">This means that “some computation” will be repeated for each entry of the vector specified in the line with <code class="code-inline tex2jax_ignore">for</code>. Do not forget to <code class="code-inline tex2jax_ignore">end</code> the loop: Matlab needs it to know which part of the code should be repeated in the loop. Indenting the body of the loop is optional but it improves readability.</p>
+<article class="example example-like" id="example-sum-cubes-for-loop"><a data-knowl="" class="id-ref original" data-refid="hk-example-sum-cubes-for-loop"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Sum of cubes.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-sum-cubes-for-loop"><article class="example example-like"><p id="p-113">Find the sum of cubes of the integers from 1 to 10 using a <code class="code-inline tex2jax_ignore">for</code> loop.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-23" id="answer-23"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-23"><div class="answer solution-like">
+<pre class="code-block tex2jax_ignore">s = 0;
+for k = 1:10
+    s = s + k^3;
+end
+</pre>
+<p id="p-114">Explanation: before entering the loop, we initialize the variable <code class="code-inline tex2jax_ignore">s</code> with 0, meaning that the value of the sum is 0 before we start adding things to it. Each time the command <code class="code-inline tex2jax_ignore">s = s + k^3</code> is executed, the cube of <code class="code-inline tex2jax_ignore">k</code> is added to <code class="code-inline tex2jax_ignore">s</code>. This repeats for each value in the vector <code class="code-inline tex2jax_ignore">1:10</code>. When the loop ends, the variable <code class="code-inline tex2jax_ignore">s</code> will contain the sum of cubes.</p>
+<p id="p-115">This example is for illustration only: in practice the array operation <code class="code-inline tex2jax_ignore">sum((1:10).^3)</code> would be a better choice because it is shorter and possibly more efficient than the loop.</p>
+<p id="p-116">One could use a more descriptive variable name instead of <code class="code-inline tex2jax_ignore">s</code>, for example <code class="code-inline tex2jax_ignore">total</code>. But do not use <code class="code-inline tex2jax_ignore">sum</code> because this is the name of a built-in Matlab function. Same goes for <code class="code-inline tex2jax_ignore">max</code> and <code class="code-inline tex2jax_ignore">min</code>: since they are names of built-in functions, they should not be used as variable names. Also, although mathematicians often use \(i\) as index variable, it is too easy to confuse with digit \(1\) and so is best avoided.</p>
+</div></div>
+</div></article></div>
+<p id="p-117">A loop is necessary for <dfn class="terminology">iterative</dfn> computations, when every step of computation uses the result of the previous one. <a class="xref" data-knowl="./knowl/example-sum-cubes-for-loop.html" title="Example 4.1.1: Sum of cubes">Example 4.1.1</a> is not like this, since the cubes of 1, 2, 3,... can be computed independently of each other: we do not need the cube of 5 in order to compute the cube of 6. In contrast, the computation of arithmetic-geometric mean in <a class="xref" data-knowl="./knowl/example-agm.html" title="Example 1.2.1: Arithmetic and geometric means">Example 1.2.1</a> is iterative: we compute the arithmetic and geometric means, and then use them as an input for next computation.</p>
+<article class="example example-like" id="example-agm-for-loop"><a data-knowl="" class="id-ref original" data-refid="hk-example-agm-for-loop"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Arithmetic-geometric mean using a <code class="code-inline tex2jax_ignore">for</code> loop.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-agm-for-loop"><article class="example example-like"><p id="p-118">Find the arithmetic-geometric mean (AGM) of 11 and 31 using a <code class="code-inline tex2jax_ignore">for</code> loop.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref original" data-refid="hk-answer-24" id="answer-24"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-24"><div class="answer solution-like">
+<pre class="code-block tex2jax_ignore">x = 11;
+y = 31;
+for k = 1:10
+    a = (x+y)/2;
+    g = sqrt(x*y);
+    x = a;
+    y = g;
+end
+disp(x)
+</pre>
+<p id="p-119">It does not matter whether we display <code class="code-inline tex2jax_ignore">x</code> or <code class="code-inline tex2jax_ignore">y</code> at the end because they become nearly equal after 10 iterations. The output is the number 19.7127, which we can check for correctness using, for example, Wolfram Alpha: <a class="external" href="https://www.wolframalpha.com/input/?i=agm%2811%2C31%29" target="_blank">agm(11,31)</a>.</p>
+<p id="p-120">The logic of the script: compute arithmetic and geometric means of x and y, then use them as our new values of x and y. One may be tempted to shorten the loop as follows</p>
+<pre class="code-block tex2jax_ignore">for k = 1:10
+    x = (x+y)/2;
+    y = sqrt(x*y);
+end
+</pre>
+<p id="p-121">But this loop produces a wrong answer: 23.9912. The reason this script is wrong is that it changes x before the computation of geometric mean.  The definition of AGM requires both arithmetic and geometric means to be computed from the same pair x, y. Only after both means are computed, we can replace x and y with new values.</p>
+</div></div>
+</div></article></div></section></div></main>
+</div>
+</body>
+</html>
